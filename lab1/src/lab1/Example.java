@@ -29,13 +29,7 @@ class Example{
 	}
 	
 	
-	double distance(Example newE) throws Exception {
-		
-		if (newE.example.length != this.example.length) {
-			
-			throw new Exception("I due vettori hanno dimensione diversa!");
-			
-		}
+	double distance(Example newE) {
 		
 		int dist = 0;
 		
