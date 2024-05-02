@@ -70,7 +70,7 @@ class Data {
 					distances[i][j]=0.0;
 				}
 				else {
-					distances[i][j]= Data.Example[i].distance.Example(Data.Example[j]);
+					distances[i][j]= data[i].distance(data[j]);
 					
 				}
 						
@@ -84,17 +84,17 @@ class Data {
 	}
 	public String toString() {
 		
-			StringBuilder str=new StringBuilder ();
+			StringBuilder str = new StringBuilder();
 			
 			for (int i=0; i<numberOfExamples; i++) {
 				
 				str.append(i+": [");
 				
-				for (int j=0; j<Data.Example.length; j++) {
+				for (int j=0; j<data[i].example.length; j++) {
 					
-					str.append(get(j));
+					str.append(data[i].example[j]);
 					
-					if (j != Data.Example.length-1) {
+					if (j != data[i].example.length-1) {
 						
 						str.append(", ");
 					}
@@ -102,10 +102,15 @@ class Data {
 				
 			str.append("]\n");		
 			}
+
+			String str2 = str.toString();
+
+			return str2;
+
 	}
 
 	
-	public static void main(String args[]){
+	/*public static void main(String args[]){
 
 		Data trainingSet=new Data();
 
@@ -127,7 +132,7 @@ class Data {
 		
 		
 	}
-	
+	*/
 
 }
 

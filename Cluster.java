@@ -48,14 +48,15 @@ class Cluster {
 	}
 	
 	
-	public String toString() {		
+	public String toString() {
 		String str="";
 		for (int i=0;i<clusteredData.length-1;i++)
 			str+=clusteredData[i]+",";
 		str+=clusteredData[clusteredData.length-1];
 		return str;	
 	}
-	
+
+
 	String toString(Data data){
 		String str="";
 		
