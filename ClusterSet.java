@@ -49,62 +49,6 @@ class ClusterSet implements ClusterDistance {
 	}
 
 
-	/*ClusterSet mergeClosestClusters(ClusterDistance distance, Data data) { 	//unisce due cluster con la distanza euclidea più piccola
-
-		ClusterSet newCS = new ClusterSet(this.C.length);
-
-		Cluster c1 = null; //inizializzo cluster c1
-
-		Cluster c2 = null; //inizializzo cluster c2
-
-		double distanzaMinima = Double.MAX_VALUE; //metto max value così alla prima occorrezza posso memorizzare il valore temporaneamente piu piccolo
-
-		int minimo = 0; //intero che memorizza la posizione del cluster più vicino
-
-		for(int i=0; i<this.C.length; i++){
-
-			for(int j=i+1;j<this.C.length;j++){
-
-				double d = distance.distance(this.C[i], this.C[j], data); //chiamo distance scritto qui sotto
-
-				if (d<distanzaMinima){ //se il risultato di distance() è inferiore alla distanza minima allora...
-
-					distanzaMinima=d; //...memorizzo la nuova distanza minima...
-
-					c1=this.C[i]; //...il cluster c1 diventa c(i)...
-
-					c2=this.C[j]; //...il cluster c2 diventa c(j)...
-
-					minimo = i; //...memorizzo la posizione del minimo appena trovato.
-
-				}
-
-			}
-
-		}
-
-
-        Cluster newC = c1.mergeCluster(c2); //effettuo il merge dei cluster più vicini
-
-		for (int i=0; i<this.C.length; i++){
-
-			if (i == minimo){ //se i è proprio la posizione minima...
-
-				newCS.add(newC); //...allora metto nel cluster che returnerò i cluster appena mergiati
-
-			} else if (this.C[i] != c1 && this.C[i] != c2) { //se il cluster alla posizione i è diverso dai cluster c1 e c2...
-
-				newCS.add(this.C[i]); //...allora aggiungo al cluster che returnerò ciò che si trovava già di partenza lì dentro.
-
-			}
-
-
-
-		}
-
-		return newCS;
-	}*/
-
 	ClusterSet mergeClosestClusters(ClusterDistance distance, Data data) {
 		ClusterSet newCS = new ClusterSet(this.C.length);
 		Cluster c1 = null;

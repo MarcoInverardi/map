@@ -5,7 +5,7 @@ public class Dendrogram {
     private ClusterSet tree[];
 
 
-    Dendrogram(int depth){//inizializza tree con dimensione depth
+    Dendrogram(int depth){  //inizializza tree con dimensione depth
 
         tree = new ClusterSet[depth];
 
@@ -17,9 +17,9 @@ public class Dendrogram {
 
     }
 
-    void setClusterSet(ClusterSet c, int level){ //assegna c a tree[level]
+    void setClusterSet(ClusterSet c, int level){
 
-        tree[level] = c;
+        tree[level] = c;  //assegna c a tree[level]
 
     }
 

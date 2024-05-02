@@ -8,6 +8,7 @@ class Cluster {
 		
 		//add the index of a sample to the cluster
 	void addData(int id){
+
 		// controllo duplicati
 		for(int i=0; i<clusteredData.length;i++)
 			if(id==clusteredData[i])
@@ -35,7 +36,7 @@ class Cluster {
 			return copyC;
 	}
 	
-	// crea un nuovo cluster che è la fusione dei due cluster pre-esistenti
+	// crea un nuovo cluster che fa la fusione dei due cluster pre-esistenti
 	Cluster mergeCluster (Cluster c)
 	{
 		Cluster newC=new Cluster();

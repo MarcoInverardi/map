@@ -109,31 +109,6 @@ class Data {
 
 	}
 
-	
-	/*public static void main(String args[]){
-
-		Data trainingSet=new Data();
-
-		System.out.println(trainingSet);
-
-		double [][] distancematrix=trainingSet.distance();
-
-		System.out.println("Distance matrix:\n");
-
-		for(int i=0;i<distancematrix.length;i++) {
-
-			for(int j=0;j<distancematrix.length;j++)
-
-				System.out.print(distancematrix[i][j]+"\t");
-
-			System.out.println("");
-
-		}
-		
-		
-	}
-	*/
-
 }
 
 
