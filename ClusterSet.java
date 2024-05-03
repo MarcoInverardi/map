@@ -1,4 +1,7 @@
-package lab1;
+package clustering;
+
+import distance.ClusterDistance;
+import data.Data;
 
 class ClusterSet implements ClusterDistance {
 

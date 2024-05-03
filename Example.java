@@ -1,6 +1,6 @@
-package lab1;
+package data;
 
-class Example{
+public class Example{
 	
 	Double[] example;
 	
@@ -30,7 +30,7 @@ class Example{
 	}
 	
 	
-	double distance(Example newE) {
+	public double distance(Example newE) {
 		
 		int dist = 0;
 		

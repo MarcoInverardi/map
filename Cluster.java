@@ -1,6 +1,8 @@
-package lab1;
+package clustering;
 
-class Cluster {	
+import data.Data;
+
+public class Cluster {
 
 	private Integer clusteredData[]=new Integer[0];
 	
@@ -20,11 +22,11 @@ class Cluster {
 	}
 		
 	
-	int getSize() {
+	public int getSize() {
 		return clusteredData.length;
 	}
 	
-	int getElement(int i) {
+	public int getElement(int i) {
 		return clusteredData[i];
 	}
 	

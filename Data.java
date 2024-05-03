@@ -1,12 +1,12 @@
-package lab1;
+package data;
 
-class Data {
+public class Data {
 	Example data [];
 	int numberOfExamples;
 	
-	Data(){
-		
-		
+	public Data(){
+
+
 		//data
 		
 		data = new Example [5];
@@ -46,17 +46,17 @@ class Data {
 		
 	}
 
-	int getNumberOfExamples() {
+	public int getNumberOfExamples() {
 		return numberOfExamples;
 	}
 
 
-	Example getExample(int ExampleIndex) {
+	public Example getExample(int ExampleIndex) {
 		return data[ExampleIndex];
 	}
 	
 	
-	double [][] distance(){
+	public double [][] distance(){
 		
 		int n= numberOfExamples;
 		
