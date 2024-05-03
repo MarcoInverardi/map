@@ -1,5 +1,11 @@
 package lab1;
 
+import clustering.HierachicalClusterMiner;
+import data.Data;
+import distance.AverageLinkdistance;
+import distance.ClusterDistance;
+import distance.SingleLinkDistance;
+
 public class MainTest {
 
 	/**

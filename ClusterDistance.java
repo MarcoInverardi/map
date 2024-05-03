@@ -1,4 +1,7 @@
-package lab1;
+package distance;
+
+import clustering.Cluster;
+import data.Data;
 
 public interface ClusterDistance {
 		double distance(Cluster c1, Cluster c2, Data d);

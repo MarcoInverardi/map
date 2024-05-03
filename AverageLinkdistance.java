@@ -1,5 +1,9 @@
-package lab1;
+package distance;
 
+
+import clustering.Cluster;
+import data.Data;
+import data.Example;
 
 public class AverageLinkdistance implements ClusterDistance{
 

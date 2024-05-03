@@ -1,4 +1,6 @@
-package lab1;
+package clustering;
+
+import data.Data;
 
 public class Dendrogram {
 

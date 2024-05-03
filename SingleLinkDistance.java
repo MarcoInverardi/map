@@ -1,4 +1,8 @@
-package lab1;
+package distance;
+
+import clustering.Cluster;
+import data.Data;
+import data.Example;
 
 public class SingleLinkDistance implements ClusterDistance {
 	public double distance(Cluster c1, Cluster c2, Data d) {
