@@ -1,6 +1,8 @@
-package lab1;
+package clustering;
 
-class Cluster {	
+import data.Data;
+
+public class Cluster {
 
 	private Integer clusteredData[]=new Integer[0];
 	
@@ -8,6 +10,7 @@ class Cluster {
 		
 		//add the index of a sample to the cluster
 	void addData(int id){
+
 		// controllo duplicati
 		for(int i=0; i<clusteredData.length;i++)
 			if(id==clusteredData[i])
@@ -19,11 +22,11 @@ class Cluster {
 	}
 		
 	
-	int getSize() {
+	public int getSize() {
 		return clusteredData.length;
 	}
 	
-	int getElement(int i) {
+	public int getElement(int i) {
 		return clusteredData[i];
 	}
 	
@@ -35,7 +38,7 @@ class Cluster {
 			return copyC;
 	}
 	
-	// crea un nuovo cluster che è la fusione dei due cluster pre-esistenti
+	// crea un nuovo cluster che fa la fusione dei due cluster pre-esistenti
 	Cluster mergeCluster (Cluster c)
 	{
 		Cluster newC=new Cluster();
@@ -48,14 +51,15 @@ class Cluster {
 	}
 	
 	
-	public String toString() {		
+	public String toString() {
 		String str="";
 		for (int i=0;i<clusteredData.length-1;i++)
 			str+=clusteredData[i]+",";
 		str+=clusteredData[clusteredData.length-1];
 		return str;	
 	}
-	
+
+
 	String toString(Data data){
 		String str="";
 		

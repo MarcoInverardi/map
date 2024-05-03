@@ -1,12 +1,12 @@
-package lab1;
+package data;
 
-class Data {
+public class Data {
 	Example data [];
 	int numberOfExamples;
 	
-	Data(){
-		
-		
+	public Data(){
+
+
 		//data
 		
 		data = new Example [5];
@@ -46,17 +46,17 @@ class Data {
 		
 	}
 
-	int getNumberOfExamples() {
+	public int getNumberOfExamples() {
 		return numberOfExamples;
 	}
 
 
-	Example getExample(int ExampleIndex) {
+	public Example getExample(int ExampleIndex) {
 		return data[ExampleIndex];
 	}
 	
 	
-	double [][] distance(){
+	public double [][] distance(){
 		
 		int n= numberOfExamples;
 		
@@ -70,7 +70,7 @@ class Data {
 					distances[i][j]=0.0;
 				}
 				else {
-					distances[i][j]= Data.Example[i].distance.Example(Data.Example[j]);
+					distances[i][j]= data[i].distance(data[j]);
 					
 				}
 						
@@ -84,17 +84,17 @@ class Data {
 	}
 	public String toString() {
 		
-			StringBuilder str=new StringBuilder ();
+			StringBuilder str = new StringBuilder();
 			
 			for (int i=0; i<numberOfExamples; i++) {
 				
 				str.append(i+": [");
 				
-				for (int j=0; j<Data.Example.length; j++) {
+				for (int j=0; j<data[i].example.length; j++) {
 					
-					str.append(get(j));
+					str.append(data[i].example[j]);
 					
-					if (j != Data.Example.length-1) {
+					if (j != data[i].example.length-1) {
 						
 						str.append(", ");
 					}
@@ -102,32 +102,12 @@ class Data {
 				
 			str.append("]\n");		
 			}
+
+			String str2 = str.toString();
+
+			return str2;
+
 	}
-
-	
-	public static void main(String args[]){
-
-		Data trainingSet=new Data();
-
-		System.out.println(trainingSet);
-
-		double [][] distancematrix=trainingSet.distance();
-
-		System.out.println("Distance matrix:\n");
-
-		for(int i=0;i<distancematrix.length;i++) {
-
-			for(int j=0;j<distancematrix.length;j++)
-
-				System.out.print(distancematrix[i][j]+"\t");
-
-			System.out.println("");
-
-		}
-		
-		
-	}
-	
 
 }
 

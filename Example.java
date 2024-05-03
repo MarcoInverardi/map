@@ -1,12 +1,13 @@
-package lab1;
+package data;
 
-class Example{
+public class Example{
 	
 	Double[] example;
 	
 	Example(int length){
-		
-		
+
+		example = new Double[length];
+
 		for (int i=0; i<length; i++) {
 			
 			example[i] = 0.0;
@@ -22,14 +23,14 @@ class Example{
 	}
 
 	
-	Double get(int index) {
+	public Double get(int index) {
 		
 		return example[index];
 		
 	}
 	
 	
-	double distance(Example newE) {
+	public double distance(Example newE) {
 		
 		int dist = 0;
 		
@@ -42,6 +43,30 @@ class Example{
 		return dist;
 		
 	}
+
+	public String toString(){
+
+		StringBuilder ans = new StringBuilder();
+
+		ans.append("[");
+
+		for (int i=0; i<example.length; i++) {
+
+			ans.append(example[i]);
+
+			if (i != example.length-1) {
+
+				ans.append(", ");
+
+			}
+
+		}
+
+		ans.append("]");
+
+		return ans.toString();
+	}
+
 	
 	
 	public String toString(Example newE) {

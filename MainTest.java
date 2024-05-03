@@ -40,6 +40,7 @@ public class MainTest {
 		System.out.println(clustering);
 		System.out.println(clustering.toString(data));
 
+
 		System.out.println("Enter depth for clustering: ");
 
         int depth = Keyboard.readInt();

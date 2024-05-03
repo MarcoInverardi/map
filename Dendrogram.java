@@ -1,11 +1,15 @@
-package lab1;
+package clustering;
+
+import data.Data;
 
 public class Dendrogram {
 
     private ClusterSet tree[];
 
 
-    Dendrogram(int depth){ //inizializza tree con dimensione depth
+    Dendrogram(int depth){  //inizializza tree con dimensione depth
+
+        tree = new ClusterSet[depth];
 
         for (int i=0; i<depth; i++){
 
@@ -15,11 +19,12 @@ public class Dendrogram {
 
     }
 
-    void setClusterSet(ClusterSet c, int level){ //assegna c a tree[level]
+    void setClusterSet(ClusterSet c, int level){
 
-        tree[level] = c;
+        tree[level] = c;  //assegna c a tree[level]
 
     }
+
 
     int getDepth(){ //restituisce la profondità di tree
 
