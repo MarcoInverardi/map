@@ -51,6 +51,7 @@ class ClusterSet implements ClusterDistance {
 		
 	}
 
+
 	ClusterSet mergeClosestClusters(ClusterDistance distance, Data data) {
 		ClusterSet newCS = new ClusterSet(this.C.length);
 		Cluster c1 = null;
