@@ -1,4 +1,4 @@
-package data;
+package distance.data;
 
 public class Example{
 	

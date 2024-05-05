@@ -1,22 +1,25 @@
-package clustering;
+package distance.clustering;
 
-import data.Data;
+import distance.data.Data;
+import distance.default_package.InvalidDepthException;
 
 public class Dendrogram {
 
     private ClusterSet tree[];
 
 
-    Dendrogram(int depth){  //inizializza tree con dimensione depth
+    Dendrogram(int depth) throws InvalidDepthException{ //inizializza tree con dimensione depth
+
+        if (depth < 0 || depth > Data.getNumberOfExamples()) {
+            throw new InvalidDepthException("Invalid depth");
+        }
 
         tree = new ClusterSet[depth];
-
-        for (int i=0; i<depth; i++){
+        for (int i = 0; i < depth; i++) {
 
             tree[i] = new ClusterSet(depth);
 
         }
-
     }
 
     void setClusterSet(ClusterSet c, int level){

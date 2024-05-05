@@ -5,7 +5,7 @@
 //  parsing, conversions, and exception handling.
 //********************************************************************
 
-package lab1;
+package distance.default_package;
 
 import java.io.*;
 import java.util.*;

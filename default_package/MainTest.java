@@ -1,17 +1,17 @@
-package lab1;
+package distance.default_package;
 
-import clustering.HierachicalClusterMiner;
-import data.Data;
-import distance.AverageLinkdistance;
-import distance.ClusterDistance;
-import distance.SingleLinkDistance;
+import distance.clustering.HierachicalClusterMiner;
+import distance.data.Data;
+import distance.distance.AverageLinkdistance;
+import distance.distance.ClusterDistance;
+import distance.distance.SingleLinkDistance;
 
 public class MainTest {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidDepthException {
 
 
 		Data data = new Data();

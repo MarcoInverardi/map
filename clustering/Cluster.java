@@ -1,6 +1,6 @@
-package clustering;
+package distance.clustering;
 
-import data.Data;
+import distance.data.Data;
 
 public class Cluster {
 

@@ -1,14 +1,15 @@
-package clustering;
+package distance.clustering;
 
-import distance.ClusterDistance;
-import data.Data;
+import distance.default_package.InvalidDepthException;
+import distance.distance.ClusterDistance;
+import distance.data.Data;
 
 public class HierachicalClusterMiner {
 
 	private Dendrogram dendrogram;
 
 
-	public HierachicalClusterMiner(int depth) {
+	public HierachicalClusterMiner(int depth) throws InvalidDepthException {
 
 		dendrogram = new Dendrogram(depth);
 
