@@ -11,7 +11,7 @@ public class MainTest {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) throws InvalidDepthException, InvalidSizeException {
+	public static void main(String[] args) throws InvalidDepthException, InvalidSizeException, InvalidChooseException {
 
 		try{
 
@@ -56,6 +56,8 @@ public class MainTest {
 						distance1 = new SingleLinkDistance();
 					} else if (choice == 2) {
 						distance1 = new AverageLinkdistance();
+					} else {
+						throw new InvalidChooseException("Invalid input for choosing distance");
 					}
 
 					clustering2.mine(data, distance1);
@@ -64,7 +66,7 @@ public class MainTest {
 
 					System.out.println(clustering2.toString(data));
 
-				} catch (Exception e) {
+				} catch (InvalidChooseException e) {
 
 					System.out.println("Invalid input for choosing distance");
 
