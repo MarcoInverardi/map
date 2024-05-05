@@ -52,7 +52,7 @@ class ClusterSet implements ClusterDistance {
 	}
 
 
-	ClusterSet mergeClosestClusters(ClusterDistance distance, Data data) {
+	ClusterSet mergeClosestClusters(ClusterDistance distance, Data data) throws InvalidSizeException {
 		ClusterSet newCS = new ClusterSet(this.C.length);
 		Cluster c1 = null;
 		Cluster c2 = null;
@@ -90,7 +90,7 @@ class ClusterSet implements ClusterDistance {
 	public double distance(Cluster c1, Cluster c2, Data d) /*throws InvalidSizeException*/ {
 
 		if (c1.getSize() != c2.getSize()) {
-			/*throw new InvalidSizeException("Clusters' dimensions are different");*/
+			throw new InvalidSizeException("Clusters' dimensions are different");
 		}
 
 		double dist = 0.0;
