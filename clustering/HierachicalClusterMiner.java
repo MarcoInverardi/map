@@ -3,6 +3,7 @@ package distance.clustering;
 import distance.default_package.InvalidDepthException;
 import distance.distance.ClusterDistance;
 import distance.data.Data;
+import distance.default_package.InvalidSizeException;
 
 public class HierachicalClusterMiner {
 
@@ -27,7 +28,7 @@ public class HierachicalClusterMiner {
 		return dendrogram.toString(data);
 	}
 
-	public void mine(Data data, ClusterDistance distance) {
+	public void mine(Data data, ClusterDistance distance) throws InvalidSizeException {
 
 		int n = data.getNumberOfExamples();
 

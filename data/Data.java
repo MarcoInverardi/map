@@ -2,7 +2,7 @@ package distance.data;
 
 public class Data {
 	Example data [];
-	int numberOfExamples;
+	static int numberOfExamples;
 	
 	public Data(){
 
@@ -46,7 +46,7 @@ public class Data {
 		
 	}
 
-	public int getNumberOfExamples() {
+	public static int getNumberOfExamples() {
 		return numberOfExamples;
 	}
 

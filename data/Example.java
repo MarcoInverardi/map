@@ -1,5 +1,7 @@
 package distance.data;
 
+import distance.default_package.InvalidSizeException;
+
 public class Example{
 	
 	Double[] example;
@@ -30,9 +32,15 @@ public class Example{
 	}
 	
 	
-	public double distance(Example newE) {
+	public double distance(Example newE) throws InvalidSizeException {
 		
 		int dist = 0;
+
+		if (this.example.length != newE.example.length) {
+
+			throw new InvalidSizeException("The two examples have different sizes.");
+
+		}
 		
 		for (int i=0; i<newE.example.length; i++) {
 			
