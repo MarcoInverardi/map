@@ -11,7 +11,7 @@ public class Dendrogram {
     Dendrogram(int depth) throws InvalidDepthException{ //inizializza tree con dimensione depth
 
         if (depth < 0 || depth > Data.getNumberOfExamples()) {
-            throw new InvalidDepthException("Invalid depth");
+            throw new InvalidDepthException("Depth cannot be greater than number of examples");
         }
 
         tree = new ClusterSet[depth];

@@ -29,10 +29,11 @@ public class MainTest {
 				for (int j = 0; j < distancematrix.length; j++)
 					System.out.print(distancematrix[i][j] + "\t");
 				System.out.println("");
-			}
-			clustering.mine(data, distance);
+      }
+      
+			/*clustering.mine(data, distance);
 			System.out.println(clustering);
-			System.out.println(clustering.toString(data));
+			System.out.println(clustering.toString(data));*/
 
 
 			System.out.println("Enter depth for clustering: ");

@@ -1,11 +1,11 @@
-//********************************************************************
-//  Keyboard.java       Author: Lewis and Loftus
+package distance.default_package;//********************************************************************
+//  distance.default_package.Keyboard.java       Author: Lewis and Loftus
 //
 //  Facilitates keyboard input by abstracting details about input
 //  parsing, conversions, and exception handling.
 //********************************************************************
 
-package distance.default_package;
+
 
 import java.io.*;
 import java.util.*;

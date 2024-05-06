@@ -87,7 +87,7 @@ class ClusterSet implements ClusterDistance {
 		return newCS;
 	}
 
-	public double distance(Cluster c1, Cluster c2, Data d) /*throws InvalidSizeException*/ {
+	public double distance(Cluster c1, Cluster c2, Data d) throws InvalidSizeException {
 
 		if (c1.getSize() != c2.getSize()) {
 			throw new InvalidSizeException("Clusters' dimensions are different");

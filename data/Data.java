@@ -1,5 +1,7 @@
 package distance.data;
 
+import distance.default_package.InvalidSizeException;
+
 public class Data {
 	Example data [];
 	static int numberOfExamples;
@@ -56,7 +58,7 @@ public class Data {
 	}
 	
 	
-	public double [][] distance(){
+	public double [][] distance() throws InvalidSizeException {
 		
 		int n= numberOfExamples;
 		
