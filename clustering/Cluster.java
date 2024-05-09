@@ -4,7 +4,7 @@ import distance.data.Data;
 
 public class Cluster {
 
-	private Integer clusteredData[]=new Integer[0];
+	private Integer[] clusteredData =new Integer[0];
 	
 	
 		
@@ -15,7 +15,7 @@ public class Cluster {
 		for(int i=0; i<clusteredData.length;i++)
 			if(id==clusteredData[i])
 				return;
-		Integer clusteredDataTemp[]=new Integer[clusteredData.length+1];
+		Integer[] clusteredDataTemp =new Integer[clusteredData.length+1];
 		System.arraycopy(clusteredData, 0, clusteredDataTemp, 0, clusteredData.length);
 		clusteredData=clusteredDataTemp;
 		clusteredData[clusteredData.length-1]=id;			

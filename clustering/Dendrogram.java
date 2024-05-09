@@ -5,7 +5,7 @@ import distance.default_package.InvalidDepthException;
 
 public class Dendrogram {
 
-    private ClusterSet tree[];
+    private final ClusterSet[] tree;
 
 
     Dendrogram(int depth) throws InvalidDepthException{ //inizializza tree con dimensione depth
