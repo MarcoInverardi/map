@@ -3,7 +3,7 @@ package distance.data;
 import distance.default_package.InvalidSizeException;
 
 public class Data {
-	Example data [];
+	Example[] data;
 	static int numberOfExamples;
 	
 	public Data(){

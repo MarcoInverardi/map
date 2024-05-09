@@ -66,7 +66,7 @@ public class Keyboard {
 
 	private static StringTokenizer reader;
 
-	private static BufferedReader in = new BufferedReader(
+	private static final BufferedReader in = new BufferedReader(
 			new InputStreamReader(System.in));
 
 	// -----------------------------------------------------------------
@@ -170,9 +170,9 @@ public class Keyboard {
 		String token = getNextToken();
 		boolean bool;
 		try {
-			if (token.toLowerCase().equals("true"))
+			if (token.equalsIgnoreCase("true"))
 				bool = true;
-			else if (token.toLowerCase().equals("false"))
+			else if (token.equalsIgnoreCase("false"))
 				bool = false;
 			else {
 				error("Error reading boolean data, false value returned.");
@@ -193,7 +193,7 @@ public class Keyboard {
 		char value;
 		try {
 			if (token.length() > 1) {
-				current_token = token.substring(1, token.length());
+				current_token = token.substring(1);
 			} else
 				current_token = null;
 			value = token.charAt(0);

@@ -6,7 +6,7 @@ import distance.data.Data;
 
 class ClusterSet implements ClusterDistance {
 
-	private Cluster C[];
+	private final Cluster[] C;
 	private int lastClusterIndex = 0;
 
 	ClusterSet(int k) { //inizializza il ClusterSet (dimensione k)
